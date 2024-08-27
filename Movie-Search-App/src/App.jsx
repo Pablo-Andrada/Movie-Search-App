@@ -1,4 +1,5 @@
 import './App.css'
+import FormSearch from './components/FormSearch'
 
 function App() {
   // https://www.omdbapi.com/?apikey=3c327a9b&s=batman
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <h2>Main component</h2>
+      <FormSearch />
     </div>
   )
 }
