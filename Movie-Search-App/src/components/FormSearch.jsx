@@ -5,7 +5,7 @@ const FormSearch = () => {
 
     const [title, setTitle] = useState("");
 
-    const { data } = useFetch("&s=batman");
+    const { data } = useFetch("&s=titanic");
     
     const handleSubmit = e => {
         e.preventDefault();

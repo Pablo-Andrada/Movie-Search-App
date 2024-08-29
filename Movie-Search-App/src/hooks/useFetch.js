@@ -12,7 +12,15 @@ export const useFetch = params => {
         fetch(url)
             .then(respuesta => respuesta.json())
             .then(respuestaJason => {
-                console.log("data: ", respuestaJason);            
+                if (respuestaJason.Response==="True") {
+                    setData(respuestaJason.Search);
+                    setError(false);
+                } else {
+                    setError(true);
+                }
+                setIsLoading(false);
+                console.log("data: ",respuestaJason);
+                
             })
             .catch(error=>{console.log(error);
         })     
