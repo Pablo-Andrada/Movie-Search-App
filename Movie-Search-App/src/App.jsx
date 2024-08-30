@@ -1,5 +1,6 @@
 import './App.css'
 import FormSearch from './components/FormSearch'
+import Movies from './components/Movies'
 
 function App() {
   
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <h2>Main component</h2>
       <FormSearch />
+      <Movies />
     </div>
   )
 }

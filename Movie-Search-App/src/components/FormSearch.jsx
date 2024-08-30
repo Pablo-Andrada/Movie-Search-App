@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useFetch } from "../hooks/useFetch";
+import { DataContext } from "../context/DataContext";
 
 const FormSearch = () => {
 
     const [title, setTitle] = useState("");
+    const { setQuery, error } = useContext(DataContext);
 
-    const { data } = useFetch("&s=titanic");
+   // const { data } = useFetch("&s=titanic");
     
     const handleSubmit = e => {
         e.preventDefault();
-        console.log("title :", title);
+        setQuery(title);
+        //console.log("title :", title);
         
     }
 
