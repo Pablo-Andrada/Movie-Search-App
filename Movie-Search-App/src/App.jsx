@@ -10,8 +10,13 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Main component</h2>
-      <FormSearch />
+      <BrowserRouter>
+        <Routes>
+          <Route/>
+        </Routes>
+        <FormSearch />
+      </BrowserRouter>
+
       <Movies />
     </div>
   )
