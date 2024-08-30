@@ -1,6 +1,7 @@
 import './App.css'
 import FormSearch from './components/FormSearch'
 import Movies from './components/Movies'
+import {Routes,Route,BrowserRouter} from "react-router-dom"
 
 function App() {
   

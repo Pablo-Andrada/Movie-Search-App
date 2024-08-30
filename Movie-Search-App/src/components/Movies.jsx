@@ -12,9 +12,17 @@ const Movies = () => {
         <div className="movies-content">
             {
                 !isLoading ?
-                    data.map((item) => {
-                        <ItemMovie/>
-                    })
+                    data.map ( item => (
+                        <ItemMovie
+                            key={item.imbdID}
+                            id={item.imbdID}
+                            title = {item.Title}
+                            type = {item.Type}
+                            year = {item.Year}
+                            poster = {item.Poster}
+                            
+                        />
+                    ))
                 : ""
             }
         </div>
