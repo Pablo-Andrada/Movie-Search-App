@@ -1,9 +1,24 @@
 import { useContext } from "react";
+import { DataContext } from "../context/DataContext";
+import ItemMovie from "./ItemMovie";
+
 
 const Movies = () => {
-    return (<div>
-        <h2>Movies</h2>
-    </div> );
+
+    const { isLoading, data } = useContext(DataContext);
+
+
+    return (
+        <div className="movies-content">
+            {
+                !isLoading ?
+                    data.map((item) => {
+                        <ItemMovie/>
+                    })
+                : ""
+            }
+        </div>
+    );
 }
  
 export default Movies;
