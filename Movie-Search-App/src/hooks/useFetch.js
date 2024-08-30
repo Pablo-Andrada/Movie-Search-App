@@ -13,7 +13,7 @@ export const useFetch = params => {
             .then(respuesta => respuesta.json())
             .then(respuestaJason => {
                 if (respuestaJason.Response==="True") {
-                    setData(respuestaJason.Search);
+                    setData(respuestaJason.Search || respuestaJason);
                     setError(false);
                 } else {
                     setError(true);

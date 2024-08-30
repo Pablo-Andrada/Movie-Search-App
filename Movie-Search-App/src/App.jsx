@@ -16,11 +16,8 @@ function App() {
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/movies/:id' element ={<SingleMovie/>} />          
-        </Routes>
-        <FormSearch />
-      </BrowserRouter>
-
-      <Movies />
+        </Routes>        
+      </BrowserRouter>      
     </div>
   )
 }
